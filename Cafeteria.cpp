@@ -43,19 +43,19 @@ int main(){
 			for (lnMenu = 0; lnMenu < lnCantMenu; lnMenu ++){
 				cout << "            " << lnMenu << " - " << laMenu[lnMenu] << endl;
 			}
-
-			//Número de mesa.
+			
+			//NÃºmero de mesa.
 			cout << endl;
-			cout << "— Seleccione el número del menú que desea ordenar: ";
+			cout << "â€” Seleccione el nÃºmero del menÃº que desea ordenar: ";
 			cin >> lnOpc;
-
+			
 			//Temporizador.
 			lnMinutos = laMin[lnOpc];
 			lnSegundos = laSeg[lnOpc];
 			lnTiempoFuera = 0;
-
+							
 			while (lnTiempoFuera == 0){
-
+							
 				if (lnMinutos == 0 && lnSegundos == 0){
 					lnTiempoFuera = 1;
 				}
@@ -63,25 +63,25 @@ int main(){
 					lnMinutos--;
 					lnSegundos = 59;
 				}
-
+				
 				//Se le indica al usuario que la orden esta lista.
 				system("cls");
 				cout << endl << endl;
-				cout << "      ¡Su orden se ha generado con éxito!" << endl << endl << endl;
+				cout << "      Â¡Su orden se ha generado con Ã©xito!" << endl << endl << endl;
 				cout << "              Tiempo Restante " << endl;
 				cout << "                    " << lnMinutos << ":" << lnSegundos << endl;
 				Sleep(1000); //Pausa en milesegundos.
 				lnSegundos--;
-			}
+			}	
 			system("cls");
 			cout << endl << endl;
-			cout << "                        ¡Su pedido está listo y ha sido entregado éxitosamente!" << endl << endl << endl << endl;
-			cout << "— Oprima enter para continuar..." << endl;
+			cout << "                        Â¡Su pedido estÃ¡ listo y ha sido entregado Ã©xitosamente!" << endl << endl << endl << endl;
+			cout << "â€” Oprima enter para continuar..." << endl;
 			_getch();
 			system("cls");
 		}
 		cout << endl;
-	} while (lcIngreso == "z" || lcIngreso == "Z");
+	}while(lcIngreso == "z" || lcIngreso == "Z");
 	
 	return 0;
 }
